@@ -18,8 +18,8 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- 数据库: `xzhp`
 --
-CREATE DATABASE `xzhp` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `xzhp`;
+CREATE DATABASE `teamscore` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `teamscore`;
 
 -- --------------------------------------------------------
 
@@ -27,7 +27,7 @@ USE `xzhp`;
 -- 表的结构 `df`
 --
 
-CREATE TABLE IF NOT EXISTS `df` (
+CREATE TABLE IF NOT EXISTS `teamscore_df` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `a` varchar(55) NOT NULL,
   `b` varchar(55) NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `df` (
 -- 转存表中的数据 `df`
 --
 
-INSERT INTO `df` (`id`, `a`, `b`) VALUES
+INSERT INTO `teamscore_df` (`id`, `a`, `b`) VALUES
 (31, '2', '1'),
 (30, '4', '2'),
 (29, '5', '4'),

@@ -51,7 +51,7 @@ $nz = $_POST["nz"];
 if($nz){ //是否按下了提交....
 
 	
-	$sql = "INSERT INTO df (a,b) VALUES ('$ws','$nz')";
+	$sql = "INSERT INTO teamscore_df (a,b) VALUES ('$ws','$nz')";
 	mysql_query($sql);
 	
 	setcookie('over',1,time()+3600*24);
