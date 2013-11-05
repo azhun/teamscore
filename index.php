@@ -1,5 +1,7 @@
 <?php include("header.php");
 
+
+/*az:如果评过了，不能再评*/
 if(isset($_COOKIE['over'])){
 	header("Location:jg.php");
 }

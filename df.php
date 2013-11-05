@@ -1,6 +1,7 @@
+<?php include("./config/config.php") ?>
 <?php include("header.php");
 
-
+/*az:如果评过了，不能再评*/
 if(isset($_COOKIE['over'])){
 	header("Location:jg.php");
 }
@@ -49,10 +50,6 @@ $nz = $_POST["nz"];
 
 if($nz){ //是否按下了提交....
 
-	
-	mysql_connect('localhost','root','');
-	mysql_select_db('xzhp');
-	mysql_query('set names utf8');
 	
 	$sql = "INSERT INTO df (a,b) VALUES ('$ws','$nz')";
 	mysql_query($sql);

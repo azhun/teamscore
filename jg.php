@@ -1,9 +1,8 @@
+<?php include("./config/config.php") ?>
 <?php include("header.php") ?>
 
 <?php
-	mysql_connect('localhost','root','');
-	mysql_select_db('xzhp');
-	mysql_query('set names utf8');
+
 
 	$sql = "SELECT COUNT(*) as num FROM df WHERE a='1' or b='1'";   //SQL  COUNT() 用于计算个数   as num 起一个叫num 的别名
 	$r = mysql_query($sql);
