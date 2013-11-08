@@ -1,12 +1,27 @@
-<?php include("header.php");
+<?php
 
+include("./config/config.php");
+include("header.php");
 
-/*az:评过的不能再评*/
-if(isset($_COOKIE['over'])){
-	header("Location:jg.php");
+//dash 2013-11-8 增加房间判断与小组数获取
+if(isset($_GET['room_id'])){
+	$room_id = intval($_GET['room_id']);
+	if(!$room_id){header('location:index.php');}
+	$sql = "select * from `room_list` where `id` = '$room_id'";
+	$room = mysql_fetch_assoc(mysql_query($sql));
+}else{
+	header('location:index.php');
 }
 
-
+/*az:如果评过了，不能再评*/
+if(isset($_COOKIE['over'.$room_id])){
+	header("Location:jg.php?room_id=".$room_id);
+}
+/*dash 2013-11-8 增加IP判断不能再评*/
+$ip = $_SERVER['REMOTE_ADDR'];
+$sql = "select * from `teamscore_df` where `ip`='$ip' and `room_id` = '$room_id'";
+$row = mysql_fetch_assoc(mysql_query($sql));
+if(!empty($row)){header("Location:jg.php?room_id=".$room_id);}
 
  ?>
 
@@ -15,11 +30,9 @@ if(isset($_COOKIE['over'])){
 
 <div class="nr">
 	<ul>
-		<li><a href="df.php?ws=1">第一组</a></li>
-		<li><a href="df.php?ws=2">第二组</a></li>
-		<li><a href="df.php?ws=3">第三组</a></li>
-		<li><a href="df.php?ws=4">第四组</a></li>
-		<li><a href="df.php?ws=5">第五组</a></li>
+    	<?php for($i=1;$i<=$room['team_nm'];$i++){ ?>
+            <li><a href="df.php?room_id=<?php echo $room_id; ?>&amp;ws=<?php echo $i; ?>">第<?php echo $ZH_NM[$i]; ?>组</a></li>
+        <?php } ?>
 	</ul>
 </div>
 
