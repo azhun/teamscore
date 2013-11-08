@@ -13,12 +13,14 @@
 		header('location:index.php');
 	}
 	
+	$all_nm = 0;
 	$jg = array();
 	for($i=1;$i<=$room['team_nm'];$i++){
 		$sql = "SELECT COUNT(id) as num FROM teamscore_df WHERE (a='$i' or b='$i') AND room_id = '$room_id'";   //SQL  COUNT() 用于计算个数   as num 起一个叫num 的别名
 		$r = mysql_query($sql);
 		$z = mysql_fetch_array($r);
 		$jg[$i] = $z['num'];
+		$all_nm += $z['num'];
 	}
 	
 ?>
@@ -27,7 +29,7 @@
 
 <div class="nr">
 	<?php foreach($jg as $k => $v){ ?>
-	第<?php echo $ZH_NM[$k]; ?>组目前得分：<?php echo  $v*10 ?>分 <br /><br />
+		第<?php echo $ZH_NM[$k]; ?>组好评率：<?php echo  intval($v/$all_nm*100); ?>% <br /><br />
 	<?php } ?>
 </div>
 
