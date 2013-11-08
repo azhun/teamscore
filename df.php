@@ -1,7 +1,7 @@
 <?php include("./config/config.php") ?>
 <?php include("header.php");
 
-/*az:Èç¹ûÆÀ¹ýÁË£¬²»ÄÜÔÙÆÀ*/
+/*az:å¦‚æžœè¯„è¿‡äº†ï¼Œä¸èƒ½å†è¯„*/
 if(isset($_COOKIE['over'])){
 	header("Location:jg.php");
 }
@@ -9,37 +9,37 @@ if(isset($_COOKIE['over'])){
 
  ?>
 
-<h3>Äã¾õµÃÒÔÏÂÄÄ×é×öµÃ×îºÃ£¿</h3>
+<h3>ä½ è§‰å¾—ä»¥ä¸‹å“ªç»„åšå¾—æœ€å¥½ï¼Ÿ</h3>
 
 <div class="nr">
 
 	<form method="post">
 	
 		<?php if($_GET["ws"] != 1){ ?>
-			<input type="radio" name="nz"  value="1" /> µÚÒ»×é <br />
+			<input type="radio" name="nz"  value="1" /> ç¬¬ä¸€ç»„ <br />
 		<?php } ?>
 		
 		<?php if($_GET["ws"] != 2){ ?>
-			<input type="radio" name="nz"  value="2"  /> µÚ¶þ×é <br />
+			<input type="radio" name="nz"  value="2"  /> ç¬¬äºŒç»„ <br />
 		<?php } ?>
 		
 		<?php if($_GET["ws"] != 3){ ?>
-			<input type="radio" name="nz"  value="3"  /> µÚÈý×é <br />
+			<input type="radio" name="nz"  value="3"  /> ç¬¬ä¸‰ç»„ <br />
 		<?php } ?>
 		
 		
 		<?php if($_GET["ws"] != 4){ ?>		
-			<input type="radio" name="nz"  value="4" /> µÚËÄ×é <br />			
+			<input type="radio" name="nz"  value="4" /> ç¬¬å››ç»„ <br />			
 		<?php } ?>
 		
 		
 		<?php if($_GET["ws"] != 5){ ?>
-			<input type="radio" name="nz"  value="5" /> µÚÎå×é <br />
+			<input type="radio" name="nz"  value="5" /> ç¬¬äº”ç»„ <br />
 		<?php } ?>
 		
 		
 		
-		<input type="submit" value="Ìá½»..." />
+		<input type="submit" value="æäº¤..." />
 	
 	</form>
 </div>
@@ -48,10 +48,10 @@ if(isset($_COOKIE['over'])){
 $ws =  $_GET["ws"];
 $nz = $_POST["nz"];
 
-if($nz){ //ÊÇ·ñ°´ÏÂÁËÌá½»....
+if($nz){ //æ˜¯å¦æŒ‰ä¸‹äº†æäº¤....
 
 	
-	$sql = "INSERT INTO teamscore_df (a,b) VALUES ('$ws','$nz')";
+	$sql = "INSERT INTO teamscore_df (a,b,ip,room_id) VALUES ('$ws','$nz','".$_SERVER['REMOTE_ADDR']."','1')";
 	mysql_query($sql);
 	
 	setcookie('over',1,time()+3600*24);
