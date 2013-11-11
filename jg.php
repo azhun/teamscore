@@ -7,23 +7,27 @@
 	if(isset($_GET['room_id'])){
 		$room_id = intval($_GET['room_id']);
 		if(!$room_id){header('location:index.php');}
-		$sql = "select * from `room_list` where `id` = '$room_id'";
+		$sql = "select * from `ts_room_list` where `id` = '$room_id'";
 		$room = mysql_fetch_assoc(mysql_query($sql));
 	}else{
 		header('location:index.php');
 	}
 	
-	$all_nm = 0;
+	$all_nm = 0; //总权重
 	$jg = array();
 	for($i=1;$i<=$room['team_nm'];$i++){
-		$sql = "SELECT COUNT(id) as num FROM teamscore_df WHERE (a='$i' or b='$i') AND room_id = '$room_id'";   //SQL  COUNT() 用于计算个数   as num 起一个叫num 的别名
+		$sql = "SELECT COUNT(id) as num FROM ts_df WHERE (a='$i' or b='$i') AND room_id = '$room_id'";   //SQL  COUNT() 用于计算个数   as num 起一个叫num 的别名
 		$r = mysql_query($sql);
 		$z = mysql_fetch_array($r);
 		$jg[$i] = $z['num'];
 		$all_nm += $z['num'];
 	}
 	
+	//az 2013-11-11 防止 $all_nm 为 0 这种情况，被除数不能为0
+	if(!$all_nm)$all_nm = 1;
+	
 ?>
+<div class="location">您当前的位置：<a href="index.php">程序首页</a>  >>  <a href="#">得分情况</a></div>
 
 <h3>得分情况？</h3>
 

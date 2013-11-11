@@ -23,10 +23,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 表的结构 `room_list`
+-- 表的结构 `ts_room_list`
 --
 
-CREATE TABLE IF NOT EXISTS `room_list` (
+CREATE TABLE IF NOT EXISTS `ts_room_list` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `room_name` varchar(100) NOT NULL,
   `time` int(20) NOT NULL,
@@ -39,10 +39,10 @@ CREATE TABLE IF NOT EXISTS `room_list` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `teamscore_df`
+-- 表的结构 `ts_df`
 --
 
-CREATE TABLE IF NOT EXISTS `teamscore_df` (
+CREATE TABLE IF NOT EXISTS `ts_df` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `a` varchar(55) NOT NULL,
   `b` varchar(55) NOT NULL,

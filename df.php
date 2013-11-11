@@ -6,7 +6,7 @@ include("header.php");
 if(isset($_GET['room_id'])){
 	$room_id = intval($_GET['room_id']);
 	if(!$room_id){header('location:index.php');}
-	$sql = "select * from `room_list` where `id` = '$room_id'";
+	$sql = "select * from `ts_room_list` where `id` = '$room_id'";
 	$room = mysql_fetch_assoc(mysql_query($sql));
 	$ws =  $_GET["ws"];
 }else{
@@ -19,7 +19,7 @@ if(isset($_COOKIE['over'.$room_id])){
 }
 /*dash 2013-11-8 增加IP判断不能再评*/
 $ip = $_SERVER['REMOTE_ADDR'];
-$sql = "select * from `teamscore_df` where `ip`='$ip' and `room_id` = '$room_id'";
+$sql = "select * from `ts_df` where `ip`='$ip' and `room_id` = '$room_id'";
 $row = mysql_fetch_assoc(mysql_query($sql));
 if(!empty($row)){header("Location:jg.php?room_id=".$room_id);}
 
@@ -27,7 +27,7 @@ if(!empty($_POST)){ //是否按下了提交....
 
 	$nz = $_POST["nz"];
 	
-	$sql = "INSERT INTO teamscore_df (a,b,ip,room_id) VALUES ('$ws','$nz','".$_SERVER['REMOTE_ADDR']."','$room_id')";
+	$sql = "INSERT INTO ts_df (a,b,ip,room_id) VALUES ('$ws','$nz','".$_SERVER['REMOTE_ADDR']."','$room_id')";
 	mysql_query($sql);
 	
 	setcookie('over_'.$room_id,1,time()+3600*24);
