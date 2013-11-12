@@ -2,12 +2,15 @@
 <dwsync>
 <file name=".gitattributes" server="192.168.74.74" local="130281167467635290" remote="130281175200000000" Dst="0" />
 <file name=".gitignore" server="192.168.74.74" local="130281167467635290" remote="130281175200000000" Dst="0" />
-<file name="df.php" server="192.168.74.74" local="130283740030986159" remote="130283739600000000" Dst="0" />
-<file name="footer.php" server="192.168.74.74" local="130281167467645290" remote="130281175200000000" Dst="0" />
-<file name="header.php" server="192.168.74.74" local="130283658923567080" remote="130283658600000000" Dst="0" />
-<file name="jg.php" server="192.168.74.74" local="130283759120032405" remote="130283758800000000" Dst="0" />
-<file name="style.css" server="192.168.74.74" local="130281167467655291" remote="130281175200000000" Dst="0" />
-<file name="index.php" server="192.168.74.74" local="130283741603026075" remote="130283741400000000" Dst="0" />
-<file name="select_team.php" server="192.168.74.74" local="130283739982323376" remote="130283739600000000" Dst="0" />
-<file name="create_room.php" server="192.168.74.74" local="130283743623671649" remote="130283743200000000" Dst="0" />
+<file name="df.php" server="192.168.74.74" local="130287153139110992" remote="130287154200000000" Dst="0" />
+<file name="footer.php" server="192.168.74.74" local="130287153139120992" remote="130287154200000000" Dst="0" />
+<file name="header.php" server="192.168.74.74" local="130287172094590933" remote="130287171600000000" Dst="0" />
+<file name="jg.php" server="192.168.74.74" local="130287178546009933" remote="130287178200000000" Dst="0" />
+<file name="style.css" server="192.168.74.74" local="130287153139140993" remote="130287154200000000" Dst="0" />
+<file name="index.php" server="192.168.74.74" local="130287153139130993" remote="130287154200000000" Dst="0" />
+<file name="select_team.php" server="192.168.74.74" local="130287153139140993" remote="130287154200000000" Dst="0" />
+<file name="create_room.php" server="192.168.74.74" local="130287168437841779" remote="130287168000000000" Dst="0" />
+<file name="teamscore.sql" server="192.168.74.74" local="130287153139150994" remote="130287154200000000" Dst="0" />
+<file name="说明.txt" server="192.168.74.74" local="130287153139230999" remote="130287154200000000" Dst="0" />
+<file name="get_result.php" server="192.168.74.74" local="130287178387110845" remote="130287178200000000" Dst="0" />
 </dwsync>

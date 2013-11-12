@@ -25,7 +25,7 @@
     <label><input type="text" name="room_name" placeholder="课堂名" />课堂名</label>
     <label>
         <select name="team_nm">
-            <?php for($i = 2; $i<=10; $i++){ ?>
+            <?php for($i = 3; $i<=10; $i++){ ?>
             <option><?php echo $i; ?></option>
             <?php } ?>
         </select>小组数

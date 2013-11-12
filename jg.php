@@ -39,6 +39,13 @@
     </ul>
 </div>
 
+<br />
+<br />
+<br />
+<br />
+
+<a href="get_result.php?room_id=<?php echo $room_id; ?>">导出结果</a>
+
 <?php include("footer.php"); ?>
 <script>
 function sx(){
