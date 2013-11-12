@@ -31,10 +31,12 @@
 
 <h3>得分情况？</h3>
 
-<div class="nr">
+<div class="team">
+	<ul>
 	<?php foreach($jg as $k => $v){ ?>
-		第<?php echo $ZH_NM[$k]; ?>组好评率：<?php echo  intval($v/$all_nm*100); ?>% <br /><br />
+		<li><a href="#">第<?php echo $ZH_NM[$k]; ?>组好评率：<?php echo  intval($v/$all_nm*100); ?>% </a></li>
 	<?php } ?>
+    </ul>
 </div>
 
 <?php include("footer.php"); ?>

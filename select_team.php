@@ -24,11 +24,10 @@ $row = mysql_fetch_assoc(mysql_query($sql));
 if(!empty($row)){header("Location:jg.php?room_id=".$room_id);}
 
  ?>
+<div class="location">您当前的位置：<a href="index.php">程序首页</a>  >>  <a href="#">你所在的小组</a></div>
 
 <h3>你是哪一组成员？</h3>
-
-
-<div class="nr">
+<div class="team">
 	<ul>
     	<?php for($i=1;$i<=$room['team_nm'];$i++){ ?>
             <li><a href="df.php?room_id=<?php echo $room_id; ?>&amp;ws=<?php echo $i; ?>">第<?php echo $ZH_NM[$i]; ?>组</a></li>

@@ -39,22 +39,30 @@ if(!empty($_POST)){ //是否按下了提交....
 
 
 ?>
+<div class="location">您当前的位置：<a href="index.php">程序首页</a>  >>  <a href="#">评选小组</a></div>
+
+
+
 
 <h3>你觉得以下哪组做得最好？</h3>
 
-<div class="nr">
+<div class="team">
 
 	<form method="post">
+    	
 	
 		<?php
         	for($i=1;$i<=$room['team_nm'];$i++){
 				if($i != $ws){
 		?>
-			<input type="radio" name="nz"  value="<?php echo $i; ?>" /> 第<?php echo $ZH_NM[$i]; ?>组 <br />
-		<?php }} ?>
+			<li><label><input type="radio" name="nz"  value="<?php echo $i; ?>" /> 第<?php echo $ZH_NM[$i]; ?>组</labeL></li>
+		<?php }else{ ?>
+        
+        <li><label style="border:1px solid #eee;">我是第<?php echo $ZH_NM[$i]; ?>组成员</labeL></li>
+        <?php }}?>
 		
-		<input type="submit" value="提交..." />
-	
+		<input type="submit" value="提交..." class="btn" />
+		
 	</form>
 </div>
 

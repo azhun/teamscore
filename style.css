@@ -5,6 +5,7 @@ body{ background:#bfbfbf}
 ul,li{ list-style:none;}
 a{ text-decoration:none;}
 h1{ font-size:29px}
+h3{ font-size:14px; color:#F90; margin-bottom:10px;}
 
 #warp{ margin:0px auto; width:1000px; height:700px;  background:#FFF;}
 #header{ height:60px; background:#FFF}
@@ -29,7 +30,8 @@ h1{ font-size:29px}
 .location a:hover{ background:#eee; color:#333;}
 
 /*首页*/
-td{padding:5px 10px; border-bottom:1px solid #eee;}
+td{padding:10px 20px; border-bottom:1px solid #eee; font-size:14px;}
+td a:hover{ text-decoration:underline; color:#F60}
 .firstLine{ font-weight:800;}
 tr:hover{ background:#FFFCEE}
 
@@ -41,4 +43,15 @@ tr:hover{ background:#FFFCEE}
 .create input{ width:300px; height:28px; border:1px solid #ccc;}
 .create .btn:hover{ background:#000; color:#fff; cursor:pointer;}
 
+
+
+/*小组列表*/
+.team a{ width:250px; display:block; line-height:30px; border:1px #FC3 solid; margin:5px 0; text-align:center; }
+.team label{ width:250px; display:block; line-height:30px; border:1px  #FC3 solid; margin:5px 0; text-align:center; }
+
+.team a:hover{ background:#FFC;color:#000;}
+
+/*提交按钮*/
+.btn{ width:250px; height:28px; border:1px solid #ccc;}
+.btn:hover{background:#000; color:#fff; cursor:pointer;}
 
