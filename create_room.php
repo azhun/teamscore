@@ -9,7 +9,7 @@
 		$time = time();
 		$team_nm = $_POST['team_nm'];
 		$user_name = $_POST['user_name'];
-		$sql = "INSERT INTO `ts_room_list` (`room_name`,`time`,`event`,`team_nm`,`user_name`) VALUES ('$room_name','$time','1','$team_nm','$user_name')";
+		$sql = "INSERT INTO `ts_room_list` (`room_name`,`time`,`event`,`team_nm`,`user_name`,`user_ip`) VALUES ('$room_name','$time','1','$team_nm','$user_name','".$_SERVER['REMOTE_ADDR']."')";
 		mysql_query($sql);
 		$id = mysql_insert_id();
 		header('location:jg.php?room_id='.$id);

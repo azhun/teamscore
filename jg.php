@@ -45,6 +45,7 @@
 <br />
 
 <a href="get_result.php?room_id=<?php echo $room_id; ?>">导出结果</a>
+<a href="close_room.php?room_id=<?php echo $room_id; ?>">关闭课程</a>
 
 <?php include("footer.php"); ?>
 <script>

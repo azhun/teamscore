@@ -20,7 +20,8 @@
     <ul class="nav">
     	<li><a href="index.php">程序首页</a></li>
     	<li><a href="create_room.php">创建新课堂</a></li>
-        <li><a href="#">已完结</a></li>
+        <!-- 2013/11/13 dash 增加已完结显示链接 -->
+        <li><a href="index.php?event=end">已完结</a></li>
     </ul>
     
     

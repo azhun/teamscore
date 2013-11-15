@@ -4,13 +4,14 @@
 <file name=".gitignore" server="192.168.74.74" local="130281167467635290" remote="130281175200000000" Dst="0" />
 <file name="df.php" server="192.168.74.74" local="130287153139110992" remote="130287154200000000" Dst="0" />
 <file name="footer.php" server="192.168.74.74" local="130287153139120992" remote="130287154200000000" Dst="0" />
-<file name="header.php" server="192.168.74.74" local="130287172094590933" remote="130287171600000000" Dst="0" />
-<file name="jg.php" server="192.168.74.74" local="130287178546009933" remote="130287178200000000" Dst="0" />
+<file name="header.php" server="192.168.74.74" local="130287958473926269" remote="130287958200000000" Dst="0" />
+<file name="jg.php" server="192.168.74.74" local="130287953658343898" remote="130287953400000000" Dst="0" />
 <file name="style.css" server="192.168.74.74" local="130287153139140993" remote="130287154200000000" Dst="0" />
-<file name="index.php" server="192.168.74.74" local="130287153139130993" remote="130287154200000000" Dst="0" />
+<file name="index.php" server="192.168.74.74" local="130287968737223296" remote="130287968400000000" Dst="0" />
 <file name="select_team.php" server="192.168.74.74" local="130287153139140993" remote="130287154200000000" Dst="0" />
-<file name="create_room.php" server="192.168.74.74" local="130287168437841779" remote="130287168000000000" Dst="0" />
+<file name="create_room.php" server="192.168.74.74" local="130287180915075436" remote="130287180600000000" Dst="0" />
 <file name="teamscore.sql" server="192.168.74.74" local="130287153139150994" remote="130287154200000000" Dst="0" />
 <file name="说明.txt" server="192.168.74.74" local="130287153139230999" remote="130287154200000000" Dst="0" />
 <file name="get_result.php" server="192.168.74.74" local="130287178387110845" remote="130287178200000000" Dst="0" />
+<file name="close_room.php" server="192.168.74.74" local="130287964296479300" remote="130287964200000000" Dst="0" />
 </dwsync>
