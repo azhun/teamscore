@@ -8,6 +8,7 @@
 	mysql_query($sql);
 	
 	//检测当前网段所有的房间
+
 	$ip = explode('.',$_SERVER['REMOTE_ADDR']);
 	$ip = $ip[0].'.'.$ip[1].'.'.$ip[2];
 	$sql = 'SELECT * FROM `ts_room_list` WHERE `event`="1" and `user_ip` like "'.$ip.'%"';
