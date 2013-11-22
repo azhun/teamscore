@@ -1,26 +1,27 @@
 @charset "utf-8";
 /* CSS Document */
 *{ padding:0px; margin:0px; font-size:12px; font-family:Verdana, Geneva, sans-serif;}
+*:hover{ transition:all .2s ease-in;}/*所有元素追加指针经过动画效果*/
 body{ background:#bfbfbf}
 ul,li{ list-style:none;}
 a{ text-decoration:none;}
-h1{ font-size:29px}
+h1,h1 span{ font-size:29px}
+h1 span{ color:#F90;}
 h3{ font-size:14px; color:#F90; margin-bottom:10px;}
 
-#warp{ margin:0px auto; width:1000px; height:700px;  background:#FFF;}
-#header{ height:60px; background:#FFF}
-#left{ width:220px;  margin:12px 0px 0px 22px; float:left}
-#logo{ float:left;}
-#right{ width:687px; height:26px; background:#333333 url(images/imgs_02.jpg) no-repeat left; float:right;}
-#right a{ color:#999; line-height:26px; margin-right:12px; float:right;}
-#right a:hover{ color:#fff;}
-#footer{ height:35px; background:#e9e9e9}
-#footer p{ line-height:35px; float:right; margin-right:10px; color:#535353; float:right}
+#warp{ margin:0px auto; max-width:1000px; height:700px;  background:#FFF;}
+#header{ min-height:60px; background:#FFF}
+	#left{ width:220px;  padding:12px 0px 12px 22px; float:left}
+	#left img{filter:Gray;}
+	#logo{ float:left;}
+	#right{ width:687px; height:26px; background:#333333 url(images/imgs_02.jpg) no-repeat left; float:right;}
+	#right a{ color:#999; line-height:26px; margin-right:12px; float:right;}
+	#right a:hover{ color:#fff;}
 
 /*导航*/
 .nav { padding-left:63px; height:22px;}
 .nav li{ float:left;}
-.nav a{ display:block; padding:0 20px; line-height:22px; background:#FC6; margin-right:1px; color:#333;}
+.nav a{ display:block; padding:0 20px; line-height:22px; margin-right:1px; color:#333;}
 .nav a:hover{ background:#F90; color:#fff;}
 
 
@@ -40,7 +41,7 @@ tr:hover{ background:#FFFCEE}
 
 /*创建页面*/
 .create label{ display:block; margin:20px 0;}
-.create input{ width:300px; height:28px; border:1px solid #ccc;}
+.create input[type="text"]{ width:300px; height:28px; border:1px solid #ccc;}
 .create .btn:hover{ background:#000; color:#fff; cursor:pointer;}
 
 
@@ -52,6 +53,21 @@ tr:hover{ background:#FFFCEE}
 .team a:hover{ background:#FFC;color:#000;}
 
 /*提交按钮*/
-.btn{ width:250px; height:28px; border:1px solid #ccc;}
+.btn{ width:100px; height:30px; line-height:30px; text-align:center; background:#FC0; display:block; color:#000; margin:1px; border:none;}
 .btn:hover{background:#000; color:#fff; cursor:pointer;}
+
+/*footer style*/
+#footer{ height:35px; background:#e9e9e9}
+#footer p{ line-height:35px; float:right; margin-right:10px; color:#535353; float:right}
+#footer a{ color:#F60;}
+#footer a:hover{ color:#000;}
+
+
+/*响应式*/
+@media screen and (max-width:1000px){   
+   #left{ float:none;}
+   #right{ float:none; width:100%; background-image:none;transition:all .2s ease-in; }
+   .nav{padding-left:40px;}
+}
+
 

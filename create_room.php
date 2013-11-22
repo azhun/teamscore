@@ -22,7 +22,7 @@
 
 <form method="post" action="">
 
-    <label><input type="text" name="room_name" placeholder="课堂名" />课堂名</label>
+    <label><input type="text" name="room_name" placeholder="课堂名" /></label>
     <label>
         <select name="team_nm">
             <?php for($i = 3; $i<=10; $i++){ ?>
@@ -30,7 +30,7 @@
             <?php } ?>
         </select>小组数
     </label>
-    <label><input type="text" name="user_name" placeholder="创建人" />创建人</label>
+    <label><input type="text" name="user_name" placeholder="创建人" /></label>
     <label><input type="submit" value="创建" class="btn" /></label>
 </form>
 

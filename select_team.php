@@ -3,6 +3,14 @@
 include("./config/config.php");
 include("header.php");
 
+if(isset($_GET['s'])){
+	echo '
+	<style>
+		#right{display:none;}
+	</style>	
+	';
+}
+
 //dash 2013-11-8 增加房间判断与小组数获取
 if(isset($_GET['room_id'])){
 	$room_id = intval($_GET['room_id']);

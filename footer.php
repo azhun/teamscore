@@ -1,6 +1,6 @@
     </div>
     <div id="footer">
-    <p>网站开发工作室版权所有 （www.gzittc.net） 程序开发：李骞 页面重构：曹清梅</p>
+    <p>程序开发<a href="#">李骞</a>、页面重构<a href="#">曹清梅</a> <span style="color:#ccc">网站开发工作室版权所有 （www.gzittc.net）</span></p>
     </div>
 </div>
 </body>

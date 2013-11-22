@@ -44,8 +44,8 @@
 <br />
 <br />
 
-<a href="get_result.php?room_id=<?php echo $room_id; ?>">导出结果</a>
-<a href="close_room.php?room_id=<?php echo $room_id; ?>">关闭课程</a>
+<a href="get_result.php?room_id=<?php echo $room_id; ?>" class="btn">导出结果</a>
+<a href="close_room.php?room_id=<?php echo $room_id; ?>" class="btn">关闭课程</a>
 
 <?php include("footer.php"); ?>
 <script>
@@ -53,6 +53,6 @@ function sx(){
 
 	window.location = 'jg.php?room_id=<?php echo $room_id; ?>';
 }
-setTimeout('sx()',1000);
+setTimeout('sx()',3000);
 
 </script>

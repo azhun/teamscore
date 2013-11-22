@@ -10,19 +10,19 @@
 <div id="warp">
     <div id="header">
        <div id="left">
-       <div id="logo"><img src="images/imgs_05.jpg"/></div>
-         <h1>小组互评程序</h1>
+       	 <div id="logo"><img src="images/logo.png"/></div>
+         <h1 title="小组互评程序"><span>T</span>eam<span>S</span>core</h1>
        </div>
        <div id="right">
-          <a href="http://www.gzittc.net">网站开发工作室(http://www.gzittc.net)</a>
+            <ul class="nav">
+                <li><a href="index.php">程序首页</a></li>
+                <li><a href="create_room.php">创建新课堂</a></li>
+                <!-- 2013/11/13 dash 增加已完结显示链接 -->
+                <li><a href="index.php?event=end">已完结</a></li>
+            </ul>
        </div>
-    </div>
-    <ul class="nav">
-    	<li><a href="index.php">程序首页</a></li>
-    	<li><a href="create_room.php">创建新课堂</a></li>
-        <!-- 2013/11/13 dash 增加已完结显示链接 -->
-        <li><a href="index.php?event=end">已完结</a></li>
-    </ul>
+    </div><!--header end-->
+    
     
     
     

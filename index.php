@@ -8,13 +8,12 @@
 	mysql_query($sql);
 	
 	//检测当前网段所有的房间
-
 	$ip = explode('.',$_SERVER['REMOTE_ADDR']);
 	$ip = $ip[0].'.'.$ip[1].'.'.$ip[2];
 	$sql = 'SELECT * FROM `ts_room_list` WHERE `event`="1" and `user_ip` like "'.$ip.'%"';
 	$result = mysql_fetch_assoc(mysql_query($sql));
 	if(!empty($result)){
-		header('location:select_team.php?room_id='.$result['id']);	
+		header('location:select_team.php?room_id='.$result['id'].'&s=1');//s参数是用于判断是不是同一网段有人创建了房间	
 	}
 	
 	
@@ -37,8 +36,8 @@
 
 <table>
 	<tr class="firstLine">
-    	<td>房间ID</td>
-        <td>房间名</td>
+    	<td>ID</td>
+        <td>课程名</td>
         <td>创建时间</td>
         <td>创建人</td>
         <td></td>
