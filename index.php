@@ -51,9 +51,9 @@
             <td>
             	<!-- dash 2013-11-13 已经关闭的课程不允许评选 -->
             	<?php if(!isset($_GET['event'])){ ?>
-                <a href="select_team.php?room_id=<?php echo $row['id']; ?>">参与评选</a>
+                <a href="select_team.php?room_id=<?php echo $row['id']; ?>" class="minBtn">参与评选</a>
                 <?php } ?>
-                <a href="jg.php?room_id=<?php echo $row['id']; ?>">查看结果</a>
+                <a href="jg.php?room_id=<?php echo $row['id']; ?>" class="minBtn">查看结果</a>
             </td>
         </tr>
     <?php } ?>
